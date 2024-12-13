@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>todo app</title>
+    <style> 
+        .table{
+            border: 2px black solid;
+        }
+
+    </style>
+    
 </head>
 <body>
 
@@ -11,16 +18,35 @@
 
     <form action="">
         <div>
+            <table class="table">
+        <tr><td>
             <label for="title">Employee name</label>
-            <input type="text" name="title" placeholder="Enter Name">
+        </td>
+        <td>
+            <input type="text" name="title" placeholder="Enter Name"><br>
+        </td></tr> 
+         <tr><td>
             <label for="age">Age </label>
-            <input type="number" name="age" placeholder="Enter Age">
+        </td>
+        <td>
+            <input type="number" name="age" placeholder="Enter Age"><br>
+        </td></tr>
+        <tr> <td>
             <label for="mobile_no">Contact_no</label>
-            <input type="number" maxlength="10" name="mobile_no" placeholder="Enter mobile no">
+        </td><td> 
+            <input type="text" name="mobile_no" placeholder="Enter mobile no" minlength="10" maxlength="10" required><br>
+        </td></tr>
+        <tr><td>
             <label for="salary">Salary</label>
-            <input type="floatformat" name="salary" placeholder="enter salary">
-            <button type="submit">Add</button>
+        </td><td> 
+            <input type="floatformat" name="salary" placeholder="enter salary"><br>
+        </td></tr>
+        </table>
+        <br>
+        <br>
+        <button type="button">Add</button>
         </div>
     </form>
+     
 </body>
 </html>
