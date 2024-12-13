@@ -4,30 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Employee</title>
-    <style>
-        .table {
-            border: 2px black solid;
-            width: 100%;
-            border-collapse: collapse;
-        }
-        .table th, .table td {
-            padding: 10px;
-            text-align: left;
-        }
-    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
 
     <h1>Edit Employee</h1>
 
     <form action="" method="POST">
-        <table class="table">
-            <tr><td><label for="title">Employee Name</label></td><td><input type="text" name="title" value="{{ employee[1] }}" required><br></td></tr>
-            <tr><td><label for="age">Age</label></td><td><input type="number" name="age" value="{{ employee[2] }}" required><br></td></tr>
-            <tr><td><label for="mobile_no">Contact No</label></td><td><input type="text" name="mobile_no" value="{{ employee[3] }}" minlength="10" maxlength="10" required><br></td></tr>
-            <tr><td><label for="salary">Salary</label></td><td><input type="number" name="salary" value="{{ employee[4] }}" required><br></td></tr>
-        </table>
-        <button type="submit" class="btn">Update</button>
+        <div class="input-group input-group-sm mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-sm">Name</span>
+            <input type="text" name="name" class="form-control" value="{{ employee[1] }}" required>
+        </div>
+        <div class="input-group input-group-sm mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-sm">Age</span>
+            <input type="text" name="age" class="form-control" value="{{ employee[2] }}" required>
+        </div>
+        <div class="input-group input-group-sm mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-sm">Contact No</span>
+            <input type="text" name="contact_no" class="form-control" value="{{ employee[3] }}" required>
+        </div>
+        <div class="input-group input-group-sm mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-sm">Salary</span>
+            <input type="text" name="salary" class="form-control" value="{{ employee[4] }}" required>
+        </div>
+        <button type="submit" class="btn btn-info">Update</button>
     </form>
 
 </body>

@@ -58,9 +58,9 @@ def index():
 # Route to handle adding an employee
 @app.route('/add', methods=['POST'])
 def add_employee():
-    name = request.form['title']
+    name = request.form['name']
     age = request.form['age']
-    contact_no = request.form['mobile_no']
+    contact_no = request.form['contact_no']
     salary = request.form['salary']
     
     employee = Employee(name, age, contact_no, salary)
@@ -82,9 +82,9 @@ def edit_employee(id):
     employee = cur.fetchone()
     
     if request.method == 'POST':
-        name = request.form['title']
+        name = request.form['name']
         age = request.form['age']
-        contact_no = request.form['mobile_no']
+        contact_no = request.form['contact_no']
         salary = request.form['salary']
         
         Employee.update(id, name, age, contact_no, salary)
